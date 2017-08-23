@@ -117,8 +117,8 @@
         \subsubsection{Tranformatie $DFA \rightarrow DFA_{min}$}
             Als we een $DFA(Q,\sum,\delta,q_s,F)$ hebben, construeren we $DFA_{min}(\tilde{Q}, \sum, \tilde{\delta}, \tilde{q_s}, \tilde{F})$ waarbij:
             \begin{itemize}
-                \item $\tilde{Q} = {Q_1, Q_2,...}$ waarbij $Q_i$ verkregen wordt door het algoritme om f-gelijke toestanden samen te nemen.
-                \item $\tilde{\delta}(Q_i, a) = Q_j$ waarbij $Q_j$ verkregen wordt door: neem een $q \epsilon Q_i$ en neem dan de $Q_j$ zodanig dat $\delta(q,a) = Q_j$
+                \item $\tilde{Q} = \{Q_1, Q_2,...\}$ waarbij $Q_i$ verkregen wordt door het algoritme om f-gelijke toestanden samen te nemen.
+                \item $\tilde{\delta}(Q_i, a) = Q_j$ waarbij $Q_j$ verkregen wordt door: neem een $q \epsilon Q_i$ en neem dan de $Q_j$ zodanig dat $\delta(q,a)\ \epsilon \ Q_j$
                 \item $\tilde{q_s}$ is de $Q_i$ waarvoor geldt $q_s \epsilon Q_i$
                 \item $\tilde{F}$ is de verzameling van $Q_i$ waarvoor geldt $Q_i \cap F \neq \emptyset$ 
             \end{itemize}
@@ -195,7 +195,7 @@
                 \item[Unie:] \textit{No idea}
                 \item[Doorsnede:] Niet gesloten: Neem als voorbeelden $L_1 = \{a^i b^i c^i  \vert  i \geq 0\}$ en $L_2 = \{a^i c^i b^i  \vert  i \geq 0\}$. De doorsnede hiervan is $L_1 \cap L_2 = \{\epsilon\}$ (want enkel voor $i=0$ bepalen beide talen dezelfde string). Dit is een reguliere (en bijgevolg contextvrije) taal.
                 \item[Complement:] Niet gesloten: Aangezien het complement van een Contextvrije Taal niet gesloten is, is het complement van een Niet-contextvrije Taal ook niet gesloten.
-                \item[Concatenatie:] Niet gesloten: Als een deel van een string niet context vrij is, dan is een concatenatie met een andere string ook zowiezo niet context vrij. (\textit{Denk ik toch})
+                \item[Concatenatie:] Gesloten: Als een deel van een string niet context vrij is, dan is een concatenatie met een andere string ook zowiezo niet context vrij. (\textit{Denk ik toch})
             \end{description}
 
 \newpage
